@@ -18,14 +18,18 @@
             .lazy = true,
         },
         .zglfw = .{
-            .url = "https://github.com/zig-gamedev/zglfw/archive/0dd29d8073487c9fe1e45e6b729b3aac271d5a71.tar.gz",
-            .hash = "zglfw-0.10.0-dev-zgVDNIG4IQBWN_sfMD-xfC9bJS2hbBN2W7jNlDLovcdC",
+            .url = "git+https://github.com/zig-gamedev/zglfw.git#2450fe3c4140091287c79cb41e4a8020af73d896",
+            .hash = "zglfw-0.10.0-dev-zgVDNHC7IQAbvGj5whD2Cp5TMmo5G2C9gNYaF-y-EDZ3",
+            .lazy = true,
+        },
+        .webgpu_headers = .{
+            .url = "https://github.com/webgpu-native/webgpu-headers/archive/673658bc2bd70ec39fc55ebe6bb0173cf6d0a603.tar.gz",
+            .hash = "N-V-__8AAEDmCwCG_LBUyjbPgby3BnpN3cMcfmHImZBxSAJV",
             .lazy = true,
         },
         .zgpu = .{
-            .url = "https://github.com/zig-gamedev/zgpu/archive/e6d8103b3c34ce1d6aab4db86dedf9ac889b4e67.tar.gz",
-            .hash = "zgpu-0.12.0-dev-nqFT5DSoCACIu3-Gnwlg3Gv1if5vU5RBhpk8o6r6-vqk",
-            .lazy = true,
+            .url = "git+https://github.com/zig-gamedev/zgpu.git#c944c734f8e352056cf8c1f69d2090c96ca659a2",
+            .hash = "zgpu-0.12.0-dev-nqFT5M-oCACfTMBjC5-__rRDBhjGKT0_Pupb-MP8CNPq",
         },
         .zsdl = .{
             .url = "https://github.com/zig-gamedev/zsdl/archive/fa05b59b5e133141680077534e6c86d8c98f8dec.tar.gz",
