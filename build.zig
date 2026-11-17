@@ -273,17 +273,17 @@ pub fn build(b: *std.Build) void {
             if (b.lazyDependency("zglfw", .{})) |zglfw| {
                 imgui_mod.addIncludePath(zglfw.path("libs/glfw/include"));
             }
-            if (b.lazyDependency("zgpu", .{})) |zgpu| {
-                if (target.result.os.tag != .emscripten) {
-                    imgui_mod.addIncludePath(zgpu.path("libs/dawn/include"));
-                }
-            }
+
+            if (b.lazyDependency("webgpu_headers", .{})) |h| imgui_mod.addIncludePath(h.path("."));
             imgui_mod.addCSourceFiles(.{
                 .files = &.{
                     "libs/imgui/backends/imgui_impl_glfw.cpp",
                     "libs/imgui/backends/imgui_impl_wgpu.cpp",
                 },
-                .flags = cflags,
+                .flags = &(cflags.* ++ .{
+                    "-DGLFW_INCLUDE_NONE",
+                    "-DIMGUI_IMPL_WEBGPU_BACKEND_DAWN",
+                }),
             });
         },
         .glfw_opengl3 => {

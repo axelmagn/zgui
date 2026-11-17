@@ -63,9 +63,9 @@
 #ifndef IMGUI_DISABLE
 #include "imgui_impl_wgpu.h"
 #include <limits.h>
-#include <webgpu/webgpu.h>
+#include <webgpu.h>
 
-#ifdef IMGUI_IMPL_WEBGPU_BACKEND_DAWN
+#if defined(IMGUI_IMPL_WEBGPU_BACKEND_DAWN) || defined(IMGUI_IMPL_WEBGPU_BACKEND_WGPU)
 // Dawn renamed WGPUProgrammableStageDescriptor to WGPUComputeState (see: https://github.com/webgpu-native/webgpu-headers/pull/413)
 // Using type alias until WGPU adopts the same naming convention (#8369)
 using WGPUProgrammableStageDescriptor = WGPUComputeState;
