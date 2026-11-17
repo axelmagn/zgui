@@ -29,7 +29,7 @@
 #include "imgui.h"          // IMGUI_IMPL_API
 #ifndef IMGUI_DISABLE
 
-#include <webgpu/webgpu.h>
+#include <webgpu.h>
 
 // Initialization data, for ImGui_ImplWGPU_Init()
 struct ImGui_ImplWGPU_InitInfo
